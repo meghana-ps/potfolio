@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============================================================
+         PORTFOLIO: Meghana Paladi Shekar
+         Last updated: May 2026
+         To edit: Open this file in VS Code. Each section is clearly
+         labelled. Change text between > and < tags. See README.md
+         for a full editing guide.
+    ============================================================ -->
+
+    <title>Meghana Paladi Shekar | Data Scientist & ML Engineer</title>
+    <meta name="description" content="Data Scientist and ML Engineer based in Sweden. Master's student at Lund University. Python, SQL, LLMs, Power BI.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION BAR
+     Edit: nav links text, or add/remove links
+============================================================ -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="#hero" class="nav-logo">MPS<span class="dot">.</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobileNav">
+    <ul>
+        <li><a href="#about" onclick="closeMobileNav()">About</a></li>
+        <li><a href="#skills" onclick="closeMobileNav()">Skills</a></li>
+        <li><a href="#experience" onclick="closeMobileNav()">Experience</a></li>
+        <li><a href="#projects" onclick="closeMobileNav()">Projects</a></li>
+        <li><a href="#contact" onclick="closeMobileNav()">Contact</a></li>
+    </ul>
+</div>
+
+
+<!-- ============================================================
+     HERO SECTION
+     Edit: greeting, name, tagline, description, button labels
+     Photo: replace ./assets/profile.jpg with your image path
+============================================================ -->
+<section id="hero">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <p class="hero-eyebrow">
+                <span class="status-dot"></span>
+                Available for Data Science &amp; ML roles in Sweden
+            </p>
+
+            <!-- EDIT: Your name -->
+            <h1 class="hero-name">Meghana<br><em>Paladi Shekar</em></h1>
+
+            <!-- EDIT: Your one-line positioning statement -->
+            <p class="hero-role">Data Scientist · ML Engineer · LLM Specialist</p>
+
+            <!-- EDIT: 2-3 sentence pitch — this is what recruiters read first -->
+            <p class="hero-desc">
+                MSc candidate at <strong>Lund University</strong> with 17+ months of industry experience
+                turning raw, complex data into scalable ML pipelines and actionable insights.
+                Currently building LLM-powered data systems at <strong>GPC Lund</strong> — passionate
+                about the full journey from messy data to production-ready solutions.
+            </p>
+
+            <div class="hero-actions">
+                <!-- EDIT: Update CV link to your actual PDF path -->
+                <a href="./assets/Meghana_Paladi_Shekar_CV.pdf" download class="btn-primary">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+                <a href="#projects" class="btn-ghost">View Work</a>
+            </div>
+
+            <!-- EDIT: Key stats — update numbers as you grow -->
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">17+</span>
+                    <span class="stat-label">Months Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">4</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">98%</span>
+                    <span class="stat-label">Test Coverage Achieved</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDIT: Replace src with your profile photo path -->
+        <div class="hero-photo-wrap">
+            <div class="hero-photo">
+                <img src="./assets/profile.jpg" alt="Meghana Paladi Shekar — Data Scientist">
+            </div>
+            <!-- Floating badge — edit or remove -->
+            <div class="photo-badge">
+                <i class="fas fa-map-marker-alt"></i>
+                Skåne, Sweden
+            </div>
+        </div>
+    </div>
+
+    <!-- Decorative background elements — no need to edit -->
+    <div class="hero-bg-ring ring-1"></div>
+    <div class="hero-bg-ring ring-2"></div>
+</section>
+
+
+<!-- ============================================================
+     ABOUT SECTION
+     Edit: the paragraph text. Keep it to 3–4 short paragraphs.
+     Tip: Lead with impact, not background.
+============================================================ -->
+<section id="about">
+    <div class="section-inner">
+        <div class="section-label">01 — About</div>
+        <h2 class="section-title">The person behind the data.</h2>
+
+        <div class="about-grid">
+            <div class="about-text">
+                <!-- EDIT: About paragraphs -->
+                <p>
+                    I'm a data professional who genuinely enjoys the messy, ambiguous early stages of a data problem —
+                    where the question isn't even clearly defined yet. I find that's where the most interesting work happens.
+                    My background spans data science, machine learning engineering, and automation testing, which gives me
+                    an unusually broad lens: I care about model accuracy <em>and</em> production reliability.
+                </p>
+                <p>
+                    Currently, I'm completing my MSc in Data Analytics and Business Economics at <strong>Lund University</strong>
+                    while working as an ML Intern at <strong>GPC Lund</strong>, where my thesis focuses on building
+                    <em>ChemALLM</em> — a framework for automated chemical entity extraction and semantic database updating
+                    using fine-tuned LLMs and NLP pipelines.
+                </p>
+                <p>
+                    Before Sweden, I spent time at <strong>LG Soft India</strong> (Automation Engineer for Nissan IVI systems)
+                    and <strong>Mu Sigma</strong> (Trainee Decision Scientist), where I learned that the best data work
+                    is tightly connected to real business outcomes — not just model metrics.
+                </p>
+                <p>
+                    I'm looking for roles in <strong>Data Science, ML Engineering, or Data Analytics</strong> in Sweden
+                    where I can contribute to meaningful, scalable data solutions from day one.
+                </p>
+            </div>
+
+            <!-- EDIT: Quick facts — update or add rows -->
+            <div class="about-facts">
+                <h3>Quick Facts</h3>
+                <ul class="fact-list">
+                    <li>
+                        <span class="fact-icon"><i class="fas fa-graduation-cap"></i></span>
+                        <div>
+                            <strong>MSc Data Analytics & Business Economics</strong>
+                            <em>Lund University · 2025–Present</em>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fact-icon"><i class="fas fa-graduation-cap"></i></span>
+                        <div>
+                            <strong>BE Information Science, CGPA 9.06</strong>
+                            <em>AMC Engineering College · 2019–2023</em>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fact-icon"><i class="fas fa-language"></i></span>
+                        <div>
+                            <strong>Languages</strong>
+                            <em>English (Professional) · Swedish (Learning)</em>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <div>
+                            <strong>Location</strong>
+                            <em>Helsingborg, Sweden · Open to relocation</em>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fact-icon"><i class="fas fa-certificate"></i></span>
+                        <div>
+                            <strong>Certifications</strong>
+                            <em>Python for DS (Coursera) · Agile Scrum Master · Claude Code in Action</em>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SKILLS SECTION
+     Edit: skill category names, icons, and the items inside each.
+     Add a new <div class="skill-card"> block to add a new category.
+     Icon codes: https://fontawesome.com/icons
+============================================================ -->
+<section id="skills">
+    <div class="section-inner">
+        <div class="section-label">02 — Skills</div>
+        <h2 class="section-title">What I work with.</h2>
+        <p class="section-subtitle">
+            A toolkit built across academia, startups, and enterprise — spanning the full data stack.
+        </p>
+
+        <div class="skills-grid">
+
+            <!-- SKILL CARD — duplicate this block to add more -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="tag tag-primary">Python</span>
+                    <span class="tag tag-primary">SQL</span>
+                    <span class="tag tag-primary">R</span>
+                    <span class="tag tag-primary">JavaScript</span>
+                    <span class="tag tag-primary">Java</span>
+                    <span class="tag tag-primary">PostgreSQL</span>
+                    <span class="tag tag-primary">C</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning & AI</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="tag tag-primary">Scikit-Learn</span>
+                    <span class="tag tag-primary">NLP</span>
+                    <span class="tag tag-primary">LLMs</span>
+                    <span class="tag tag-primary">Feature Engineering</span>
+                    <span class="tag tag-primary">EDA</span>
+                    <span class="tag tag-primary">RAG</span>
+                    <span class="tag tag-primary">Transformers</span>
+                    <span class="tag tag-primary">Prompt Engineering</span>
+                    <span class="tag tag-primary">Model Evaluation</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Engineering</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="tag tag-primary">ETL Pipelines</span>
+                    <span class="tag tag-primary">Data Architecture</span>
+                    <span class="tag tag-primary">Data Munging</span>
+                    <span class="tag tag-primary">Spark</span>
+                    <span class="tag tag-primary">DBeaver</span>
+                    <span class="tag tag-primary">Docker</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Visualisation & BI</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="tag tag-primary">Power BI</span>
+                    <span class="tag tag-primary">Tableau</span>
+                    <span class="tag tag-primary">Looker</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud & Platforms</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="tag tag-primary">AWS</span>
+                    <span class="tag tag-primary">Azure</span>
+                    <span class="tag tag-primary">Git</span>
+                    <span class="tag tag-primary">Jira</span>
+                    <span class="tag tag-primary">Jupyter</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <i class="fas fa-people-arrows"></i>
+                    <h3>Methodologies</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="tag tag-primary">Agile</span>
+                    <span class="tag tag-primary">Scrum</span>
+                    <span class="tag tag-primary">Data-Driven Decision Making</span>
+                    <span class="tag tag-primary">A/B Testing</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     EXPERIENCE SECTION
+     Edit: role, company, date, location, and the bullet points.
+     To add a new job: duplicate the <div class="exp-item"> block.
+     Most recent job should be first.
+============================================================ -->
+<section id="experience">
+    <div class="section-inner">
+        <div class="section-label">03 — Experience</div>
+        <h2 class="section-title">Where I've worked.</h2>
+
+        <div class="exp-list">
+
+            <!-- JOB 1 — Current role -->
+            <div class="exp-item exp-item--active">
+                <div class="exp-meta">
+                    <!-- EDIT: dates -->
+                    <span class="exp-date">Mar 2026 — Present</span>
+                    <span class="exp-badge">Current</span>
+                </div>
+                <div class="exp-content">
+                    <!-- EDIT: role and company -->
+                    <h3 class="exp-role">Machine Learning Intern <span class="exp-sep">·</span> Master's Thesis</h3>
+                    <p class="exp-company">
+                        <i class="fas fa-building"></i> Global Product Compliance Group (GPC) &mdash; Lund, Sweden
+                    </p>
+                    <!-- EDIT: thesis/project title -->
+                    <p class="exp-project">
+                        <i class="fas fa-flask"></i>
+                        <em>ChemALLM: A Framework for Chemical Entity Extraction and Semantic Database Updating</em>
+                    </p>
+                    <!-- EDIT: bullet points. Lead each with a strong action verb and quantify where possible. -->
+                    <ul class="exp-bullets">
+                        <li>Designed and deployed a <strong>Human-in-the-Loop LLM-powered data preprocessing system</strong> integrating ML, NLP, deep learning, and rule-based techniques to automate data cleaning, schema alignment, and querying.</li>
+                        <li>Built a comprehensive chemical resource database via APIs and web scraping, leveraging Docker, DBeaver, and VS Code for scalable data integration and management.</li>
+                        <li>Fine-tuned Large Language Models (LLMs) to enhance automated data cleaning accuracy and enable intelligent querying over structured chemical datasets.</li>
+                        <li>Engineered end-to-end ML pipelines that significantly improved data quality, analytical accuracy, and operational efficiency across heterogeneous datasets.</li>
+                    </ul>
+                    <!-- EDIT: tech tags used in this role -->
+                    <div class="exp-tech">
+                        <span>Python</span><span>LLMs</span><span>NLP</span><span>Docker</span><span>PostgreSQL</span><span>RAG</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JOB 2 -->
+            <div class="exp-item">
+                <div class="exp-meta">
+                    <span class="exp-date">Mar 2024 — Oct 2024</span>
+                </div>
+                <div class="exp-content">
+                    <h3 class="exp-role">Automation Test Engineer <span class="exp-sep">·</span> Nissan IVI</h3>
+                    <p class="exp-company">
+                        <i class="fas fa-building"></i> LG Soft India &mdash; Bangalore, India
+                    </p>
+                    <ul class="exp-bullets">
+                        <li>Developed end-to-end automation scripts for In-Vehicle Infotainment (IVI) validation achieving <strong>98% test coverage</strong> and significantly reducing manual testing effort.</li>
+                        <li>Covered modules including Transversal HMI, User Profile, Phone Projection, Media, EV and energy consumption for Nissan EU and DA2 platforms.</li>
+                        <li>Operated within an Agile/Scrum team using Testpresso Workstation, Code Beamer, CAN bus, and VS base server in a fast-paced enterprise environment.</li>
+                    </ul>
+                    <div class="exp-tech">
+                        <span>Python</span><span>Jira</span><span>Agile/Scrum</span><span>Test Automation</span><span>CAN bus</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JOB 3 -->
+            <div class="exp-item">
+                <div class="exp-meta">
+                    <span class="exp-date">Aug 2023 — Feb 2024</span>
+                </div>
+                <div class="exp-content">
+                    <h3 class="exp-role">Trainee Decision Scientist</h3>
+                    <p class="exp-company">
+                        <i class="fas fa-building"></i> Mu Sigma Inc. &mdash; Bangalore, India
+                    </p>
+                    <ul class="exp-bullets">
+                        <li>Built an end-to-end Employee Attrition classification model; delivered findings via a <strong>Power BI dashboard</strong> enabling HR to visualise cost transformation drivers across employee cohorts.</li>
+                        <li>Executed a Customer Churn Prediction project covering data preprocessing, EDA, modelling, evaluation, and validation — producing insights that directly informed service-improvement strategies.</li>
+                    </ul>
+                    <div class="exp-tech">
+                        <span>Python</span><span>Power BI</span><span>EDA</span><span>Scikit-Learn</span><span>SQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERNSHIP 4 -->
+            <div class="exp-item">
+                <div class="exp-meta">
+                    <span class="exp-date">2022 — 2023</span>
+                </div>
+                <div class="exp-content">
+                    <h3 class="exp-role">Data Science & Analysis Intern</h3>
+                    <p class="exp-company">
+                        <i class="fas fa-building"></i> Spark Foundation &mdash; Bangalore, India
+                    </p>
+                    <ul class="exp-bullets">
+                        <li>Engineered scalable data pipelines to transform complex datasets into actionable insights, enabling data-driven decision-making across business units.</li>
+                    </ul>
+                    <div class="exp-tech">
+                        <span>Python</span><span>Data Pipelines</span><span>EDA</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     PROJECTS SECTION
+     Edit: project name, description, tech stack, and links.
+     To add a project: duplicate the <div class="proj-card"> block.
+     Image: place project images in ./assets/ and update src=""
+============================================================ -->
+<section id="projects">
+    <div class="section-inner">
+        <div class="section-label">04 — Projects</div>
+        <h2 class="section-title">Things I've built.</h2>
+        <p class="section-subtitle">
+            From published IoT research to ML classification systems — each project is a full problem-to-solution story.
+        </p>
+
+        <div class="proj-grid">
+
+            <!-- PROJECT 1 — Featured (spans 2 columns on desktop) -->
+            <div class="proj-card proj-card--featured">
+                <!-- EDIT: replace with your project image in assets/ -->
+                <div class="proj-img">
+                    <img src="./assets/project_greenhouse.png" alt="ChemALLM Project">
+                    <div class="proj-img-overlay">
+                        <!-- EDIT: links -->
+                        <a href="#" class="proj-link-btn" title="View Project"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="proj-link-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="proj-body">
+                    <span class="proj-tag">Thesis · NLP · LLM</span>
+                    <!-- EDIT: project name and description -->
+                    <h3>ChemALLM — Chemical Entity Extraction Framework</h3>
+                    <p>
+                        Master's thesis project at GPC Lund. Built an end-to-end framework that uses fine-tuned LLMs and NLP
+                        pipelines to automatically extract chemical entities from unstructured text, align them to a structured
+                        schema, and update a semantic database — drastically reducing manual curation effort.
+                    </p>
+                    <!-- EDIT: tech stack -->
+                    <div class="proj-tech-row">
+                        <span>Python</span><span>LLMs</span><span>NLP</span><span>RAG</span><span>Docker</span><span>PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="proj-card">
+                <div class="proj-img">
+                    <img src="./assets/project_obesity.png" alt="Obesity Prediction">
+                    <div class="proj-img-overlay">
+                        <a href="#" class="proj-link-btn" title="View Project"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="proj-link-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="proj-body">
+                    <span class="proj-tag">ML · Classification</span>
+                    <h3>Lifestyle Analytics for Predicting Obesity Levels</h3>
+                    <p>
+                        ML classification model categorising 7 obesity levels from lifestyle and demographic data.
+                        Applied bootstrapping, Random Forest, Splines, and SVM; included distribution analysis
+                        to handle non-normality in real-world survey data.
+                    </p>
+                    <div class="proj-tech-row">
+                        <span>Python</span><span>Scikit-Learn</span><span>SVM</span><span>Random Forest</span><span>R</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="proj-card">
+                <div class="proj-img">
+                    <img src="./assets/project_global.png" alt="Global Socio-Economic EDA">
+                    <div class="proj-img-overlay">
+                        <a href="#" class="proj-link-btn" title="View Project"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="proj-link-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="proj-body">
+                    <span class="proj-tag">EDA · Data Viz</span>
+                    <h3>Global Socio-Economic & Demographic Development</h3>
+                    <p>
+                        Deep EDA on a multivariate World Bank dataset. Surfaced patterns in GDP, life expectancy,
+                        population growth, and technology adoption across 180+ countries using advanced
+                        visualisation techniques.
+                    </p>
+                    <div class="proj-tech-row">
+                        <span>Python</span><span>Pandas</span><span>Seaborn</span><span>Plotly</span><span>World Bank API</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 4 — Published Research -->
+            <div class="proj-card">
+                <div class="proj-img">
+                    <img src="./assets/project_greenhouse.png" alt="Greenhouse IoT">
+                    <div class="proj-img-overlay">
+                        <a href="https://www.ijcttjournal.org/archives/ijctt-v69i9p101" target="_blank" class="proj-link-btn" title="Published Paper"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="proj-body">
+                    <span class="proj-tag proj-tag--published">Published · IJCTT</span>
+                    <h3>Greenhouse Farming using IoT</h3>
+                    <p>
+                        Published research implementing a NodeMCU-based IoT framework for real-time
+                        greenhouse monitoring — pH, temperature, humidity, soil moisture — controlled via
+                        Arduino Uno and ThingSpeak. <strong>Peer-reviewed and published in IJCTT.</strong>
+                    </p>
+                    <div class="proj-tech-row">
+                        <span>Arduino</span><span>NodeMCU</span><span>IoT</span><span>ThingSpeak</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT SECTION
+     Edit: headline, subtext, and social links/email
+============================================================ -->
+<section id="contact">
+    <div class="section-inner">
+        <div class="section-label">05 — Contact</div>
+
+        <div class="contact-wrap">
+            <div class="contact-left">
+                <!-- EDIT: headline and subtext -->
+                <h2 class="contact-title">Let's work<br><em>together.</em></h2>
+                <p class="contact-sub">
+                    I'm actively looking for Data Science, ML Engineering, or Data Analytics roles in Sweden.
+                    Whether you have an open position, a project to discuss, or just want to connect — I'd love to hear from you.
+                </p>
+
+                <!-- EDIT: update email, linkedin, and github URLs -->
+                <div class="contact-links">
+                    <a href="mailto:Meghanapaladishekar@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Meghanapaladishekar@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/meghana-ps-1692001" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>linkedin.com/in/meghana-ps-1692001</span>
+                    </a>
+                    <a href="tel:+46762842944" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <span>+46 762 842 944</span>
+                    </a>
+                    <a href="#" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/meghana-ps</span>
+                        <!-- EDIT: replace with actual GitHub URL when ready -->
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <!-- EDIT: update CV href to point to your PDF -->
+                <a href="./assets/Meghana_Paladi_Shekar_CV.pdf" download class="contact-cv-btn">
+                    <div class="cv-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="cv-text">
+                        <strong>Download CV</strong>
+                        <em>PDF · Updated May 2026</em>
+                    </div>
+                    <i class="fas fa-arrow-down cv-arrow"></i>
+                </a>
+
+                <div class="contact-availability">
+                    <div class="avail-dot"></div>
+                    <span>Available for new opportunities</span>
+                </div>
+
+                <!-- EDIT: update location -->
+                <div class="contact-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Helsingborg, Skåne, Sweden<br><small>Open to remote and on-site roles</small></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     Edit: your name in the copyright text
+============================================================ -->
+<footer>
+    <div class="footer-inner">
+        <span class="footer-logo">MPS<span class="dot">.</span></span>
+        <p>Designed &amp; built by <strong>Meghana Paladi Shekar</strong> · 2026</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/meghana-ps-1692001" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:Meghanapaladishekar@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT — scroll effects, mobile nav, active states
+     No need to edit unless adding new sections
+============================================================ -->
+<script>
+    // ---- Mobile nav toggle ----
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    function closeMobileNav() {
+        mobileNav.classList.remove('open');
+        hamburger.classList.remove('active');
+    }
+    hamburger.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+        hamburger.classList.toggle('active');
+    });
+
+    // ---- Navbar scroll shadow ----
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ---- Intersection observer: fade-in sections ----
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.exp-item, .proj-card, .skill-card, .about-grid, .contact-wrap')
+        .forEach(el => observer.observe(el));
+
+    // ---- Active nav link on scroll ----
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            if (window.scrollY >= section.offsetTop - 120) current = section.getAttribute('id');
+        });
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+        });
+    });
+
+    // ---- Smooth scroll for all anchor links ----
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
